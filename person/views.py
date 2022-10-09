@@ -76,6 +76,7 @@ class PersonDetailView(DetailView):
 
 
 class PersonUpdateView(UpdateView):
+    # SHARES model_form.html THAT CREATE VIEW USES
     model = Person
     fields = "__all__"
     success_url = reverse_lazy('person:list_person')
