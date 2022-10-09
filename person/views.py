@@ -77,7 +77,7 @@ class PersonDetailView(DetailView):
     model = Person
 
 
-class PersonUpdateView(UpdateView):
+class PersonUpdateView(UpdateView, forms.ModelForm):
     # SHARES model_form.html THAT CREATE VIEW USES
     model = Person
     fields = "__all__"
