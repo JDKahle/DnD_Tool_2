@@ -8,14 +8,14 @@
     
 
 
-    <h1 style="text-align: center;">{{form.first_name}} {{form.last_name}}</h1>
+    <h1 style="text-align: center;">{{person.first_name}} {{person.last_name}}</h1>
 
 
     <div style="display: flex; margin: 1rem; flex-wrap: wrap; justify-content: center; background-image: url('https://c-rpg.net/img/bg.jpg');">
     
         <!-- The image box -->
         <div class="card" style="width: 18rem; margin: 3px; min-width: 200px;">
-            <img src="{{form.image}}" class="card-img-top" alt="...">
+            <img src="{{person.image}}" class="card-img-top" alt="...">
             <ul class="list-group list-group-flush">
                 <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Image URL:</b> {{form.image}}</li>
 
