@@ -27,10 +27,10 @@
                 <a class="nav-link active text-light" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">Add Person</a>
+                <a class="nav-link text-light" href="{% url 'person:create_person' %}">Add Person</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link text-light" href="#">List Slaves (Market)</a>
+                <a class="nav-link text-light" href="{% url 'person:list_person' %}">List Slaves (Market)</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link text-light" href="#">Battle List Slaves</a>
