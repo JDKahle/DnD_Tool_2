@@ -71,4 +71,5 @@ class PersonLvlListView(ListView):
 
 
 class PersonDetailView(DetailView):
+    # model_detail.html
     model = Person

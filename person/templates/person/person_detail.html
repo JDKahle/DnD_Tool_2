@@ -1,0 +1,85 @@
+{% extends "base.html" %}
+{% block content %}
+
+
+<h1 style="text-align: center;">{{slave.caste}} {{slave.first_name}} {{slave.last_name}}</h1>
+
+
+<div style="display: flex; margin: 1rem; flex-wrap: wrap; justify-content: center;">
+
+    <!-- The image box -->
+    <div class="card" style="width: 18rem; margin: 3px; min-width: 200px;">
+        <img src="{{slave.image}}" class="card-img-top" alt="...">
+        <div class="card-body"  style="background-color: rgb(218, 192, 129);">
+            <a href="/slaves/slave_update/{{slave.id}}" class="card-link">Update</a>
+            <a href="/slaves/slave_delete/{{slave.id}}" class="card-link">Delete</a>
+        </div>
+    </div>
+
+
+    <!-- The overview box -->
+    <div class="card" style="width: 18rem; margin: 3px; min-width: 200px;">
+        <div class="card-body" style="background-color: rgb(184, 163, 114);">
+            <h5 class="card-title"><b>Overview</b></h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>First Name: </b>{{slave.first_name}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Last Name: </b> {{slave.last_name}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Klasse: </b>    {{slave.caste}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Team Role: </b> {{slave.team_role}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Weapons: </b>   {{slave.weapon}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Shield: </b>    {{slave.shield}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Outfit: </b>    {{slave.outfit}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Armor: </b>     {{slave.armor}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Languages: </b> {{slave.languages}}</li>
+
+            
+            
+        </ul>
+    </div>
+    
+    
+    <!-- The stats box -->
+    <div class="card" style="width: 18rem; margin: 3px; min-width: 200px;">
+        <div class="card-body" style="background-color: rgb(184, 163, 114);">
+            <h5 class="card-title"><b>Statistics</b></h5>
+        </div>
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Str: </b>       {{slave.str}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Dex: </b>       {{slave.dex}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Con: </b>       {{slave.con}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Int: </b>       {{slave.int}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Wis: </b>       {{slave.wis}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Cha: </b>       {{slave.cha}}</li>
+            
+            <li class="list-group-item" style="background-color: rgb(184, 163, 114);"></li>
+
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Level: </b>     {{slave.lvl}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>XP: </b>        {{slave.xp}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>AC: </b>        {{slave.ac}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>HP: </b>        {{slave.hp}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Speed: </b>     {{slave.speed}}</li>
+            <li class="list-group-item" style="background-color: rgb(218, 192, 129);"><b>Passive Perception: </b>        {{slave.passive_perception}}</li>
+</ul>
+    </div>
+
+    <!-- The description and inventory box -->
+    <div class="card" style="width: 18rem; margin: 3px; min-width: 200px;">
+        <div class="card-body" style="background-color: rgb(218, 192, 129);">
+            <h5 class="card-title"><b>Description:</b></h5>
+            <p class="card-text">{{slave.description}}</p>
+        </div>
+
+        <ul class="list-group list-group-flush">
+            <li class="list-group-item" style="background-color: rgb(184, 163, 114);"></li>
+        </ul>
+
+        <div class="card-body" style="background-color: rgb(218, 192, 129);">
+            <h5 class="card-title"><b>Inventory:</b></h5>
+            <p class="card-text">{{slave.inventory}}</p>
+        </div>
+    </div>
+
+
+</div>
+{% endblock content %}
