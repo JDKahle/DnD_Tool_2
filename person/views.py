@@ -49,3 +49,26 @@ class PersonListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return Person.objects.filter(owner=self.request.user)
+
+
+class NewPersonBattleListView(LoginRequiredMixin, ListView):
+    model = Person
+    context_object_name = "list_of_person"
+    queryset = Person.objects.order_by("first_name")
+    template_name = 'person/person_list_battlex.html'
+
+    def get_queryset(self):
+        return Person.objects.filter(owner=self.request.user)
+
+
+class PersonLvlListView(ListView):
+    model = Person
+    context_object_name = "list_of_person"
+    queryset = Person.objects.order_by("lvl").reverse()
+
+
+#### Hier hin kommen funktion von den zeilen 87 und 120.
+
+
+class PersonDetailView(DetailView):
+    model = Person
