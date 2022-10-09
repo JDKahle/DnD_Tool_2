@@ -1,7 +1,7 @@
 from django.urls import path
 from .views import (PersonHomeView, PersonCreateView, PersonListView, 
                     NewPersonBattleListView, PersonLvlListView, PersonDetailView, 
-                    PersonUpdateView, )
+                    PersonUpdateView, PersonDeleteView)
 
 from . import views
 
@@ -16,6 +16,7 @@ urlpatterns = [
     path('person_list/lvl/', PersonLvlListView.as_view(), name='lvl_list_person'),
     path('person_detail/<int:pk>', PersonDetailView.as_view(), name='detail_person'),
     path('person_update/<int:pk>', PersonUpdateView.as_view(), name='update_person'),
+    path('person_delete/<int:pk>', PersonDeleteView.as_view(), name='delete_person'),
 
 
 ]

@@ -79,3 +79,7 @@ class PersonUpdateView(UpdateView):
     model = Person
     fields = "__all__"
     success_url = reverse_lazy('person:list_person')
+
+class PersonDeleteView(DeleteView):
+    model = Person
+    success_url = reverse_lazy('person:list_person')
