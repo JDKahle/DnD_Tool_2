@@ -83,3 +83,11 @@ class PersonUpdateView(UpdateView):
 class PersonDeleteView(DeleteView):
     model = Person
     success_url = reverse_lazy('person:list_person')
+
+
+
+
+class SignUpView(CreateView):
+    form_class = UserCreationForm
+    success_url = reverse_lazy('login')
+    template_name = 'person/signup.html'
