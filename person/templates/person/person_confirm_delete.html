@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div style="  
+margin: auto;
+width: 100%;
+height: 100%;
+padding: 10px;
+text-align: center;
+background-image: url('https://ze-robot.com/images/source/34688.jpg');
+">
+
+
+
+
+
+    <h1>{{person.first_name}}</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Confirm DELETE">
+    </form>
+
+
+</div>
+
+{% endblock %}
