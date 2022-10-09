@@ -32,10 +32,10 @@
 
 {% if user.is_authenticated %}
     <p>Welcome: {{user.get_username}}</p>
-    <a href="#">Logout Here</a>
+    <a href="{% url 'logout' %}?next={{request.path}}">Logout Here</a>
 {% else %}
     <p>You are NOT logged in.</p>
-    <a href="#">Login Here</a>
+    <a href="{% url 'login' %}?next={{request.path}}">Login Here</a>
 {% endif %}
 
 
