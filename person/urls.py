@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import PersonHomeView, PersonCreateView, PersonListView, NewPersonBattleListView, PersonLvlListView, PersonDetailView, PersonUpdateView
+from .views import (PersonHomeView, PersonCreateView, PersonListView, 
+                    NewPersonBattleListView, PersonLvlListView, PersonDetailView, 
+                    PersonUpdateView, )
 
 from . import views
 
