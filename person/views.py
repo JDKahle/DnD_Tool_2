@@ -80,7 +80,10 @@ class PersonDetailView(DetailView):
 class PersonUpdateView(UpdateView, forms.ModelForm):
     # SHARES model_form.html THAT CREATE VIEW USES
     model = Person
-    fields = "__all__"
+    fields = ['image', 'caste', 'first_name', 'last_name', 'team_role', 'weapon', 'shield', 'outfit', 'armor', 
+                'lvl', 'xp', 'ac', 'hp', 'speed', 
+                'str', 'dex', 'con', 'int', 'wis', 'cha',
+                'passive_perception', 'languages', 'description', 'inventory'] # not included: 'owner'
     widgets = {'owner': forms.HiddenInput()}
     success_url = reverse_lazy('person:list_person')
 
