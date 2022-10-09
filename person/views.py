@@ -22,6 +22,8 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth.mixins import LoginRequiredMixin
 
 from django.contrib.auth.forms import UserCreationForm
+
+from django import forms
 # Create your views here.
 def simple_view(request):
     return HttpResponse('Hello!')
@@ -79,6 +81,7 @@ class PersonUpdateView(UpdateView):
     # SHARES model_form.html THAT CREATE VIEW USES
     model = Person
     fields = "__all__"
+    widgets = {'owner': forms.HiddenInput()}
     success_url = reverse_lazy('person:list_person')
 
 class PersonDeleteView(DeleteView):
