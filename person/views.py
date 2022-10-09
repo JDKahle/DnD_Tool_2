@@ -25,3 +25,6 @@ from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 def simple_view(request):
     return HttpResponse('Hello!')
+
+class PersonHomeView(TemplateView):
+    template_name = 'person/home.html'

@@ -1,0 +1,55 @@
+
+
+<h1>Home of Slaves</h1>
+
+<p>
+    TemplateView    DONE
+</p>
+<p>
+    FormView    kinda covered by CreateView
+</p>
+<p>
+    CreateView    DONE
+</p>
+<a href="#">Create Slave</a>
+<p>
+    ListView
+</p>
+<a href="#">List Slave(s)</a>
+<p>
+    DetailView    DONE
+</p>
+<p>
+    UpdateView
+</p>
+<p>
+    DeleteView
+</p>
+
+
+
+{% if user.is_authenticated %}
+    <p>Welcome: {{user.get_username}}</p>
+    <a href="#">Logout Here</a>
+{% else %}
+    <p>You are NOT logged in.</p>
+    <a href="#">Login Here</a>
+{% endif %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{% endblock content %}
